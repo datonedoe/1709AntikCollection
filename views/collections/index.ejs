@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+
+<!--<h4><%= currentUser %></h4>-->
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Antik Colection</h1>
+            <p>View antique collection from all over the world!</p>
+            <p>
+                <a class="btn btn-primary btn-me" href="/collections/new">Add A New Item To The Collection</a>
+            </p>
+        </div>
+    </header>
+    
+    <div class="row text-center" style="display:flex flex-wrap: wrap">
+        <% collections.forEach(function(collection){ %>
+            <div class="col-md-3 col-sm-6">
+                <div class="thumbnail">
+                    <img src="<%= collection.image %>">
+                    <div class = "caption">
+                         <h4> <%= collection.name %> </h4>
+                    </div>
+                    <p>
+                        <a href="/collections/<%= collection._id %>" class="btn btn-primary">More Info</a>
+                    </p>
+                </div>
+               
+                
+            </div>
+        <% }); %>
+        
+    </div>
+</div>
+
+<% include ../partials/footer %>
