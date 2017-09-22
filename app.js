@@ -16,8 +16,8 @@ var commentRoutes = require("./routes/comments"),
     collectionRoutes = require("./routes/collections"),
     indexRoutes = require("./routes/index");
     
-// var url = process.env.DATABASEURL || "mongodb://localhost/antik_v12";
-var url ="mongodb://dat:123456@ds153815.mlab.com:53815/yelpcamp1993";
+var url = process.env.DATABASEURL || "mongodb://localhost/antik_v12";
+// var url = "/////////////*******REMOVED FOR SECURITY REASON********";
 mongoose.connect(url);
 
     
